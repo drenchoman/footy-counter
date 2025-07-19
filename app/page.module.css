@@ -29,9 +29,11 @@
 
 .main {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .main ol {
@@ -67,10 +69,7 @@
   height: 48px;
   padding: 0 20px;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -107,6 +106,29 @@ a.secondary {
   flex-shrink: 0;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.number {
+  font-size: 36px;
+}
+.buttonWrapper {
+  /* width: 50px; */
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+}
+.buttonWrapper > * {
+  width: 50px;
+  height: 30px;
+  background-color: cornflowerblue;
+  border: 1px solid white;
+  font-size: 1.5rem;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
