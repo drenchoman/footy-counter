@@ -11,6 +11,7 @@ const people = [
   'Garcky',
   'Hamish',
   'Praj',
+  'Other',
 ];
 
 export default function Home() {
